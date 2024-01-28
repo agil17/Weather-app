@@ -1419,7 +1419,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 (0,_modules_functions__WEBPACK_IMPORTED_MODULE_2__.getCurrentWeatherByIp)();
 (0,_modules_event_handlers__WEBPACK_IMPORTED_MODULE_3__.formSubmitEventControl)();
 (0,_modules_event_handlers__WEBPACK_IMPORTED_MODULE_3__.addEventListenerToRadioBtn)();
