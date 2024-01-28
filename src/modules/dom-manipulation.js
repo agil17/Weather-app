@@ -1,7 +1,7 @@
 const replaceMainContent = () => {
   const main = document.querySelector('main');
   main.replaceChildren();
-}
+};
 
 const tempRadioBtn = () => {
   const radioEl = document.getElementsByName('radio');
@@ -39,6 +39,7 @@ const displayForecastData = (data) => {
     imgEl.classList.add('forecast-day-icon');
 
     const weatherDescEl = document.createElement('p');
+    weatherDescEl.classList.add('weather-text');
     weatherDescEl.textContent = day.day.condition.text;
     imgDescDiv.appendChild(imgEl);
     imgDescDiv.appendChild(weatherDescEl);
@@ -104,47 +105,9 @@ const displayCurrInitialWeather = (data) => {
 };
 
 const displayInitialData = (data) => {
-  // console.log(data);
-
-  // // Get farenheit or celcius
-  // const radioEl = document.getElementsByName('radio');
-  // let radioValue = null;
-  // radioEl.forEach((radio) => {
-  //   if (radio.checked) {
-  //     radioValue = radio.value;
-  //   }
-  // });
-
-  // // Current Weather
-
-  // // Set temp degrees
-  // const currDegEl = document.querySelector('#current-weather-degrees');
-  // currDegEl.textContent =
-  //   radioValue === 'f' ? `${data.current.temp_f}` : `${data.current.temp_c}`;
-
-  // // setTimeout(() => {
-  // //   currDegEl.textContent =
-  // //     radioValue === 'f'
-  // //       ? `${data.current.temp_f}°`
-  // //       : `${data.current.temp_c}°`;
-  // // }, 0);
-
-  // // Set curr temp icon
-  // const imgCurrentEl = document.querySelector('#current-weather-icon');
-  // const currentImgSrc = data.current.condition.icon;
-  // imgCurrentEl.src = `http:${currentImgSrc}`;
-
-  // // Set curr temp description
-  // const currTempText = document.querySelector('.current-weather-description');
-  // currTempText.textContent = data.current.condition.text;
-
   displayCurrInitialWeather(data);
   displayCurrInitLocation(data);
   displayForecastData(data.forecast.forecastday);
-};
-
-const consLog = () => {
-  console.log('Shut up errors');
 };
 
 export { displayInitialData, replaceMainContent };
