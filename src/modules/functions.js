@@ -42,17 +42,22 @@ const getRelevantData = (data) => {
   //     "Saturday",
   //     "Sunday"
   // ]
+  // console.log(data);
   const relData = {};
   relData.location = {};
   relData.location.name = data.location.name;
   relData.location.region = data.location.region;
   relData.location.country = data.location.country;
-  relData.location.localTime = data.location.localtime;
+  relData.location.localTime = data.location.localtime.toString().slice(0, 10);
   // relData.location.day = dayOfWeek[new Date(data.location.localtime.split(' ')[0]).getDay()];
   // console.log(new Date(data.location.localtime.split(' ')[0]).toString().slice(0, 10));
-  relData.location.day = new Date(data.location.localtime.split(' ')[0])
-    .toString()
-    .slice(0, 10);
+  // relData.location.day = new Date(data.location.localtime.split(' ')[0])
+  //   .toString()
+  //   .slice(0, 10);
+  // relData.location.day = getDateToString()
+  relData.location.day = getDateToString(relData.location.localTime);
+
+
 
   relData.current = {};
   relData.current.temp_c = data.current.temp_c;

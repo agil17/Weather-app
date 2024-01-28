@@ -419,112 +419,129 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `body {
-    min-height: 100vh;
-    min-width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  background-color: rgb(16, 67, 95);
+  color: white;
 }
 
 #search-input {
-    padding: 5px 10px;
-    width: 350px;
-    text-align: center;
-    border-radius: 50px;
+  padding: 5px 10px;
+  width: 350px;
+  text-align: center;
+  border-radius: 50px;
 }
 
-#search-button  {
-    cursor: pointer;
-    position: relative;
-    left: -40px;
-    border: none;
-    background: rgba(0,0,0,0);
+#search-button {
+  cursor: pointer;
+  position: relative;
+  left: -40px;
+  border: none;
+  background: rgba(0, 0, 0, 0);
 }
 
 .radio-buttons {
-    margin-top: 10px;
-    font-size: 1.5rem;
+  margin-top: 10px;
+  font-size: 1.5rem;
 }
 
-#c-radio, #f-radio {
-    appearance: none;
+#c-radio,
+#f-radio {
+  appearance: none;
 }
 
 .forecast-container {
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    grid-template-columns: repeat(4, 1fr);
-    /* align-items: center; */
-    min-width: 60vw;
-    height: 60vh;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 10px 0;
-    border: 1px black solid;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: repeat(4, 1fr);
+  /* align-items: center; */
+  min-width: 60vw;
+  height: 60vh;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 0;
+  border: 1px black solid;
 }
 
 .forecast-day {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .current-weather-temp {
-    grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 1rem;
-    border: 1px black solid;
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 1rem;
+  border: 1px black solid;
 }
 
 #current-weather-icon {
-    grid-column: 2 / 3;
-    place-self: center;
+  grid-column: 2 / 3;
+  /* place-self: center; */
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 10px;
 }
 
 .current-weather-degrees {
-    grid-column: 3 / 5;
-    grid-row: 1 / -1;
-    place-self: center;
+  grid-column: 3 / 5;
+  grid-row: 1 / -1;
+  place-self: center;
+  font-size: 2.5rem;
+  font-weight: 900;
 }
 
 .current-weather-location {
-    grid-column: 3 / -1;
-    align-self: center;
+  grid-column: 3 / -1;
+  align-self: center;
+  font-size: 1.2rem;
 }
 
 .current-weather-description {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    place-self: center;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.city-name {
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 .forecast-days-container {
-    grid-column: 1 / -1;
-    border: solid blue 1px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  grid-column: 1 / -1;
+  border: solid blue 1px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .day {
-    grid-column: 1 / -1;
-    place-self: center;
+  grid-column: 1 / -1;
+  place-self: center;
 }
 
 .img-description-container {
-    grid-column: 1 / 3;
-    place-self: center;
-    grid-row: 2 / -1;
+  grid-column: 1 / 3;
+  place-self: center;
+  grid-row: 2 / -1;
 }
 
 .forecast-temp-container {
-    grid-row: 2 / -1;
-    grid-column: 3 / -1;
-    place-self: center;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,iBAAiB;IACjB,gBAAgB;IAChB,aAAa;IACb,sBAAsB;IACtB,8BAA8B;IAC9B,mBAAmB;IACnB,yCAAyC;AAC7C;;AAEA;IACI,iBAAiB;IACjB,YAAY;IACZ,kBAAkB;IAClB,mBAAmB;AACvB;;AAEA;IACI,eAAe;IACf,kBAAkB;IAClB,WAAW;IACX,YAAY;IACZ,yBAAyB;AAC7B;;AAEA;IACI,gBAAgB;IAChB,iBAAiB;AACrB;;AAEA;IACI,gBAAgB;AACpB;;AAEA;IACI,aAAa;IACb,2BAA2B;IAC3B,qCAAqC;IACrC,yBAAyB;IACzB,eAAe;IACf,YAAY;IACZ,oCAAoC;IACpC,mBAAmB;IACnB,eAAe;IACf,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,kCAAkC;IAClC,qCAAqC;AACzC;;AAEA;IACI,kBAAkB;IAClB,aAAa;IACb,qCAAqC;IACrC,kCAAkC;IAClC,gBAAgB;IAChB,uBAAuB;AAC3B;;AAEA;IACI,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,mBAAmB;IACnB,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,mBAAmB;IACnB,sBAAsB;IACtB,aAAa;IACb,qCAAqC;AACzC;;AAEA;IACI,mBAAmB;IACnB,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,kBAAkB;IAClB,gBAAgB;AACpB;;AAEA;IACI,gBAAgB;IAChB,mBAAmB;IACnB,kBAAkB;AACtB","sourcesContent":["body {\n    min-height: 100vh;\n    min-width: 100vw;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    font-family: Arial, Helvetica, sans-serif;\n}\n\n#search-input {\n    padding: 5px 10px;\n    width: 350px;\n    text-align: center;\n    border-radius: 50px;\n}\n\n#search-button  {\n    cursor: pointer;\n    position: relative;\n    left: -40px;\n    border: none;\n    background: rgba(0,0,0,0);\n}\n\n.radio-buttons {\n    margin-top: 10px;\n    font-size: 1.5rem;\n}\n\n#c-radio, #f-radio {\n    appearance: none;\n}\n\n.forecast-container {\n    display: grid;\n    grid-template-rows: 1fr 2fr;\n    grid-template-columns: repeat(4, 1fr);\n    /* align-items: center; */\n    min-width: 60vw;\n    height: 60vh;\n    background: rgba(255, 255, 255, 0.1);\n    border-radius: 10px;\n    padding: 10px 0;\n    border: 1px black solid;\n}\n\n.forecast-day {\n    display: grid;\n    grid-template-rows: repeat(3, 1fr);\n    grid-template-columns: repeat(4, 1fr);\n}\n\n.current-weather-temp {\n    grid-column: 2 / 3;\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    grid-template-rows: repeat(2, 1fr);\n    column-gap: 1rem;\n    border: 1px black solid;\n}\n\n#current-weather-icon {\n    grid-column: 2 / 3;\n    place-self: center;\n}\n\n.current-weather-degrees {\n    grid-column: 3 / 5;\n    grid-row: 1 / -1;\n    place-self: center;\n}\n\n.current-weather-location {\n    grid-column: 3 / -1;\n    align-self: center;\n}\n\n.current-weather-description {\n    grid-column: 2 / 3;\n    grid-row: 2 / 3;\n    place-self: center;\n}\n\n.forecast-days-container {\n    grid-column: 1 / -1;\n    border: solid blue 1px;\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n}\n\n.day {\n    grid-column: 1 / -1;\n    place-self: center;\n}\n\n.img-description-container {\n    grid-column: 1 / 3;\n    place-self: center;\n    grid-row: 2 / -1;\n}\n\n.forecast-temp-container {\n    grid-row: 2 / -1;\n    grid-column: 3 / -1;\n    place-self: center;\n}"],"sourceRoot":""}]);
+  grid-row: 2 / -1;
+  grid-column: 3 / -1;
+  place-self: center;
+}
+`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,mBAAmB;EACnB,mDAAmD;EACnD,iCAAiC;EACjC,YAAY;AACd;;AAEA;EACE,iBAAiB;EACjB,YAAY;EACZ,kBAAkB;EAClB,mBAAmB;AACrB;;AAEA;EACE,eAAe;EACf,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,4BAA4B;AAC9B;;AAEA;EACE,gBAAgB;EAChB,iBAAiB;AACnB;;AAEA;;EAEE,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,2BAA2B;EAC3B,qCAAqC;EACrC,yBAAyB;EACzB,eAAe;EACf,YAAY;EACZ,oCAAoC;EACpC,mBAAmB;EACnB,eAAe;EACf,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,kCAAkC;EAClC,qCAAqC;AACvC;;AAEA;EACE,kBAAkB;EAClB,aAAa;EACb,qCAAqC;EACrC,kCAAkC;EAClC,gBAAgB;EAChB,uBAAuB;AACzB;;AAEA;EACE,kBAAkB;EAClB,wBAAwB;EACxB,aAAa;EACb,YAAY;EACZ,kBAAkB;EAClB,SAAS;AACX;;AAEA;EACE,kBAAkB;EAClB,gBAAgB;EAChB,kBAAkB;EAClB,iBAAiB;EACjB,gBAAgB;AAClB;;AAEA;EACE,mBAAmB;EACnB,kBAAkB;EAClB,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;EAClB,eAAe;EACf,kBAAkB;EAClB,iBAAiB;AACnB;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;AACrB;;AAEA;EACE,mBAAmB;EACnB,sBAAsB;EACtB,aAAa;EACb,qCAAqC;AACvC;;AAEA;EACE,mBAAmB;EACnB,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;EAChB,mBAAmB;EACnB,kBAAkB;AACpB","sourcesContent":["body {\n  min-height: 100vh;\n  min-width: 100vw;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  font-family: 'Roboto', Arial, Helvetica, sans-serif;\n  background-color: rgb(16, 67, 95);\n  color: white;\n}\n\n#search-input {\n  padding: 5px 10px;\n  width: 350px;\n  text-align: center;\n  border-radius: 50px;\n}\n\n#search-button {\n  cursor: pointer;\n  position: relative;\n  left: -40px;\n  border: none;\n  background: rgba(0, 0, 0, 0);\n}\n\n.radio-buttons {\n  margin-top: 10px;\n  font-size: 1.5rem;\n}\n\n#c-radio,\n#f-radio {\n  appearance: none;\n}\n\n.forecast-container {\n  display: grid;\n  grid-template-rows: 1fr 2fr;\n  grid-template-columns: repeat(4, 1fr);\n  /* align-items: center; */\n  min-width: 60vw;\n  height: 60vh;\n  background: rgba(255, 255, 255, 0.1);\n  border-radius: 10px;\n  padding: 10px 0;\n  border: 1px black solid;\n}\n\n.forecast-day {\n  display: grid;\n  grid-template-rows: repeat(3, 1fr);\n  grid-template-columns: repeat(4, 1fr);\n}\n\n.current-weather-temp {\n  grid-column: 2 / 3;\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n  grid-template-rows: repeat(2, 1fr);\n  column-gap: 1rem;\n  border: 1px black solid;\n}\n\n#current-weather-icon {\n  grid-column: 2 / 3;\n  /* place-self: center; */\n  height: 100px;\n  width: 100px;\n  position: relative;\n  top: 10px;\n}\n\n.current-weather-degrees {\n  grid-column: 3 / 5;\n  grid-row: 1 / -1;\n  place-self: center;\n  font-size: 2.5rem;\n  font-weight: 900;\n}\n\n.current-weather-location {\n  grid-column: 3 / -1;\n  align-self: center;\n  font-size: 1.2rem;\n}\n\n.current-weather-description {\n  grid-column: 2 / 3;\n  grid-row: 2 / 3;\n  text-align: center;\n  font-size: 1.5rem;\n}\n\n.city-name {\n    font-size: 2.5rem;\n    font-weight: bold;\n}\n\n.forecast-days-container {\n  grid-column: 1 / -1;\n  border: solid blue 1px;\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n}\n\n.day {\n  grid-column: 1 / -1;\n  place-self: center;\n}\n\n.img-description-container {\n  grid-column: 1 / 3;\n  place-self: center;\n  grid-row: 2 / -1;\n}\n\n.forecast-temp-container {\n  grid-row: 2 / -1;\n  grid-column: 3 / -1;\n  place-self: center;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1036,9 +1053,95 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   consLog: () => (/* binding */ consLog),
 /* harmony export */   displayInitialData: () => (/* binding */ displayInitialData)
 /* harmony export */ });
-const displayInitialData = (data) => {
-  console.log(data);
+const tempRadioBtn = () => {
+  const radioEl = document.getElementsByName('radio');
+  let radioValue = null;
+  radioEl.forEach((radio) => {
+    if (radio.checked) {
+      radioValue = radio.value;
+    }
+  });
 
+  return radioValue;
+}
+
+const displayForecastData = (data) => {
+  const mainForecastData = document.querySelector('main');
+  
+  data.forEach((day, index) => {
+    console.log(day);
+    
+    // create card
+    const card = document.createElement('section');
+    card.classList.add('forecast-day');
+    mainForecastData.appendChild(card);
+
+    // day div
+    const dayDiv = document.createElement('div');
+    dayDiv.classList.add('day');
+    dayDiv.textContent = day.date;
+
+    // img desc div
+    const imgDescDiv = document.createElement('div');
+    imgDescDiv.classList.add('img-description-container');
+    
+    const imgEl = document.createElement('img');
+    imgEl.src = `http:${day.day.condition.icon}`;
+    imgEl.alt = 'weather-icon';
+    imgEl.classList.add('forecast-day-icon');
+    
+    const weatherDescEl = document.createElement('p');
+    weatherDescEl.textContent = day.day.condition.text;
+    imgDescDiv.appendChild(imgEl);
+    imgDescDiv.appendChild(weatherDescEl);
+
+    // forecast temp div
+    const forecastTempDiv = document.createElement('div');
+    forecastTempDiv.classList.add('forecast-temp-container');
+
+    const tempHigh = document.createElement('p');
+    tempHigh.classList.add('temp-high');
+    
+    const tempLow = document.createElement('p');
+    tempLow.classList.add('temp-low');
+
+    if(tempRadioBtn() === "f") {
+      console.log('temp f');
+      tempHigh.textContent = `${day.day.maxtemp_f}°`;
+      tempLow.textContent = `${day.day.mintemp_f}°`;
+    } else {
+      console.log('temp c');
+      tempHigh.textContent = `${day.day.maxtemp_c}°`;
+      tempLow.textContent = `${day.day.mintemp_c}°`;
+    }
+
+    forecastTempDiv.appendChild(tempHigh);
+    forecastTempDiv.appendChild(tempLow);
+    
+    // append divs to card
+    card.appendChild(dayDiv);
+    card.appendChild(imgDescDiv);
+    card.appendChild(forecastTempDiv);
+    
+  })
+
+}
+
+const displayCurrInitLocation = (data) => {
+  // current city name
+  const cityNameEl = document.querySelector('.city-name');
+  cityNameEl.textContent = data.location.name;
+
+  // current region name
+  const regionNameEl = document.querySelector('.region');
+  regionNameEl.textContent = data.location.region;
+
+  // current country name
+  const countryNameEl = document.querySelector('.country');
+  countryNameEl.textContent = data.location.country;
+};
+
+const displayCurrInitialWeather = (data) => {
   // Get farenheit or celcius
   const radioEl = document.getElementsByName('radio');
   let radioValue = null;
@@ -1047,40 +1150,69 @@ const displayInitialData = (data) => {
       radioValue = radio.value;
     }
   });
-  
-
-  // Set temp degrees
-
-  const currDegEl = document.querySelector("#current-weather-degrees");
-  currDegEl.textContent = radioValue === "f" ? `${data.current.temp_f}` : `${data.current.temp_c}`;
-
-  
-  setTimeout(() => {
-    currDegEl.textContent = radioValue === "f" ? `${data.current.temp_f}°` : `${data.current.temp_c}°`;
-  }, 0);
-
-
-//   currDegEl = "HTML Changed";
-
-  //   if (radioValue === 'f') {
-//     const currTempDegEl = document.querySelector('.current-weather-degrees');
-//     currTempDegEl.textContent = '';
-//     console.log('f checked');
-//     console.log(data.current.temp_f);
-//     currTempDegEl.textContent = data.current.temp_f;
-//   } else {
-//     console.log('c checked');
-//     // currTempDegEl.textContent = `${data.current.temp_c}°`;
-//   }
 
   // Current Weather
+
+  // Set temp degrees
+  const currDegEl = document.querySelector('#current-weather-degrees');
+  currDegEl.textContent =
+    radioValue === 'f' ? `${data.current.temp_f}°` : `${data.current.temp_c}°`;
+
+  // setTimeout(() => {
+  //   currDegEl.textContent =
+  //     radioValue === 'f'
+  //       ? `${data.current.temp_f}°`
+  //       : `${data.current.temp_c}°`;
+  // }, 0);
+
+  // Set curr temp icon
   const imgCurrentEl = document.querySelector('#current-weather-icon');
   const currentImgSrc = data.current.condition.icon;
   imgCurrentEl.src = `http:${currentImgSrc}`;
 
-  const currWeatherDegEl = document.querySelector('.current-weather-degrees');
+  // Set curr temp description
+  const currTempText = document.querySelector('.current-weather-description');
+  currTempText.textContent = data.current.condition.text;
+};
 
-  currWeatherDegEl.textContent = ''; // delete this later
+const displayInitialData = (data) => {
+  // console.log(data);
+
+  // // Get farenheit or celcius
+  // const radioEl = document.getElementsByName('radio');
+  // let radioValue = null;
+  // radioEl.forEach((radio) => {
+  //   if (radio.checked) {
+  //     radioValue = radio.value;
+  //   }
+  // });
+
+  // // Current Weather
+
+  // // Set temp degrees
+  // const currDegEl = document.querySelector('#current-weather-degrees');
+  // currDegEl.textContent =
+  //   radioValue === 'f' ? `${data.current.temp_f}` : `${data.current.temp_c}`;
+
+  // // setTimeout(() => {
+  // //   currDegEl.textContent =
+  // //     radioValue === 'f'
+  // //       ? `${data.current.temp_f}°`
+  // //       : `${data.current.temp_c}°`;
+  // // }, 0);
+
+  // // Set curr temp icon
+  // const imgCurrentEl = document.querySelector('#current-weather-icon');
+  // const currentImgSrc = data.current.condition.icon;
+  // imgCurrentEl.src = `http:${currentImgSrc}`;
+
+  // // Set curr temp description
+  // const currTempText = document.querySelector('.current-weather-description');
+  // currTempText.textContent = data.current.condition.text;
+
+  displayCurrInitialWeather(data);
+  displayCurrInitLocation(data);
+  displayForecastData(data.forecast.forecastday);
 };
 
 const consLog = () => {
@@ -1148,17 +1280,22 @@ const getRelevantData = (data) => {
   //     "Saturday",
   //     "Sunday"
   // ]
+  // console.log(data);
   const relData = {};
   relData.location = {};
   relData.location.name = data.location.name;
   relData.location.region = data.location.region;
   relData.location.country = data.location.country;
-  relData.location.localTime = data.location.localtime;
+  relData.location.localTime = data.location.localtime.toString().slice(0, 10);
   // relData.location.day = dayOfWeek[new Date(data.location.localtime.split(' ')[0]).getDay()];
   // console.log(new Date(data.location.localtime.split(' ')[0]).toString().slice(0, 10));
-  relData.location.day = new Date(data.location.localtime.split(' ')[0])
-    .toString()
-    .slice(0, 10);
+  // relData.location.day = new Date(data.location.localtime.split(' ')[0])
+  //   .toString()
+  //   .slice(0, 10);
+  // relData.location.day = getDateToString()
+  relData.location.day = getDateToString(relData.location.localTime);
+
+
 
   relData.current = {};
   relData.current.temp_c = data.current.temp_c;

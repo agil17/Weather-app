@@ -2,7 +2,4 @@
 // console.log(new Date(currDate));
 
 let foo = 'hiya';
-let bar = foo;
-bar = 'goodbye';
-
-console.log(foo);
+let interval = 0;
