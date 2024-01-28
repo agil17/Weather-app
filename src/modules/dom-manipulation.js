@@ -1,3 +1,8 @@
+const replaceMainContent = () => {
+  const main = document.querySelector('main');
+  main.replaceChildren();
+}
+
 const tempRadioBtn = () => {
   const radioEl = document.getElementsByName('radio');
   let radioValue = null;
@@ -8,14 +13,12 @@ const tempRadioBtn = () => {
   });
 
   return radioValue;
-}
+};
 
 const displayForecastData = (data) => {
   const mainForecastData = document.querySelector('main');
-  
-  data.forEach((day, index) => {
-    console.log(day);
-    
+
+  data.forEach((day) => {
     // create card
     const card = document.createElement('section');
     card.classList.add('forecast-day');
@@ -29,12 +32,12 @@ const displayForecastData = (data) => {
     // img desc div
     const imgDescDiv = document.createElement('div');
     imgDescDiv.classList.add('img-description-container');
-    
+
     const imgEl = document.createElement('img');
     imgEl.src = `http:${day.day.condition.icon}`;
     imgEl.alt = 'weather-icon';
     imgEl.classList.add('forecast-day-icon');
-    
+
     const weatherDescEl = document.createElement('p');
     weatherDescEl.textContent = day.day.condition.text;
     imgDescDiv.appendChild(imgEl);
@@ -46,31 +49,27 @@ const displayForecastData = (data) => {
 
     const tempHigh = document.createElement('p');
     tempHigh.classList.add('temp-high');
-    
+
     const tempLow = document.createElement('p');
     tempLow.classList.add('temp-low');
 
-    if(tempRadioBtn() === "f") {
-      console.log('temp f');
-      tempHigh.textContent = `${day.day.maxtemp_f}°`;
-      tempLow.textContent = `${day.day.mintemp_f}°`;
+    if (tempRadioBtn() === 'f') {
+      tempHigh.textContent = `High: ${day.day.maxtemp_f}°`;
+      tempLow.textContent = `Low: ${day.day.mintemp_f}°`;
     } else {
-      console.log('temp c');
-      tempHigh.textContent = `${day.day.maxtemp_c}°`;
-      tempLow.textContent = `${day.day.mintemp_c}°`;
+      tempHigh.textContent = `High: ${day.day.maxtemp_c}°`;
+      tempLow.textContent = `Low: ${day.day.mintemp_c}°`;
     }
 
     forecastTempDiv.appendChild(tempHigh);
     forecastTempDiv.appendChild(tempLow);
-    
+
     // append divs to card
     card.appendChild(dayDiv);
     card.appendChild(imgDescDiv);
     card.appendChild(forecastTempDiv);
-    
-  })
-
-}
+  });
+};
 
 const displayCurrInitLocation = (data) => {
   // current city name
@@ -87,28 +86,12 @@ const displayCurrInitLocation = (data) => {
 };
 
 const displayCurrInitialWeather = (data) => {
-  // Get farenheit or celcius
-  const radioEl = document.getElementsByName('radio');
-  let radioValue = null;
-  radioEl.forEach((radio) => {
-    if (radio.checked) {
-      radioValue = radio.value;
-    }
-  });
-
-  // Current Weather
+  const radioValue = tempRadioBtn() === 'f' ? 'f' : 'c';
 
   // Set temp degrees
   const currDegEl = document.querySelector('#current-weather-degrees');
   currDegEl.textContent =
     radioValue === 'f' ? `${data.current.temp_f}°` : `${data.current.temp_c}°`;
-
-  // setTimeout(() => {
-  //   currDegEl.textContent =
-  //     radioValue === 'f'
-  //       ? `${data.current.temp_f}°`
-  //       : `${data.current.temp_c}°`;
-  // }, 0);
 
   // Set curr temp icon
   const imgCurrentEl = document.querySelector('#current-weather-icon');
@@ -164,4 +147,4 @@ const consLog = () => {
   console.log('Shut up errors');
 };
 
-export { displayInitialData, consLog };
+export { displayInitialData, replaceMainContent };
